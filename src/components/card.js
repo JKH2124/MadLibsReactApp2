@@ -11,6 +11,8 @@ class Card extends Component {
             color: 'BLUE',
             pluralNoun: ''
         }
+
+        this.handleInputChange = this.handleInputChange.bind(this);
     }
 
     handleInputChange() {
@@ -22,7 +24,7 @@ class Card extends Component {
         return (
             <div className="card">
                 <h1>{this.state.color}</h1>
-                <input/>
+                <input onChange={this.handleInputChange}/>
             </div>
         )
 
